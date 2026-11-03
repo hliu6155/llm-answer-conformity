@@ -1,0 +1,69 @@
+{
+  "seed": 6208,
+  "subjects": [
+    "astronomy",
+    "high_school_biology",
+    "high_school_geography",
+    "prehistory",
+    "nutrition"
+  ],
+  "alignment": {
+    "rows_en": 14042,
+    "rows_zh": 14042,
+    "only_en": 0,
+    "only_zh": 0,
+    "matched": 14042,
+    "answer_key_agreement": 0.987466172909842,
+    "subjects_with_key_mismatches": {
+      "high_school_world_history": 0.2574
+    }
+  },
+  "subject_sizes": {
+    "astronomy": {
+      "test_items": 152,
+      "usable": 152
+    },
+    "high_school_biology": {
+      "test_items": 310,
+      "usable": 310
+    },
+    "high_school_geography": {
+      "test_items": 198,
+      "usable": 198
+    },
+    "prehistory": {
+      "test_items": 324,
+      "usable": 323
+    },
+    "nutrition": {
+      "test_items": 306,
+      "usable": 306
+    }
+  },
+  "counts": {
+    "main": 200,
+    "reserve": 25,
+    "pilot": 10
+  },
+  "main_answer_letters": {
+    "A": 36,
+    "B": 52,
+    "C": 55,
+    "D": 57
+  },
+  "main_endorsed_letters": {
+    "A": 51,
+    "B": 51,
+    "C": 49,
+    "D": 49
+  },
+  "main_b_label_orders": {
+    "17|29|43": 34,
+    "17|43|29": 34,
+    "29|17|43": 33,
+    "29|43|17": 33,
+    "43|17|29": 33,
+    "43|29|17": 33
+  },
+  "screening_calls": 3200
+}

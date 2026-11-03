@@ -1,0 +1,26 @@
+{
+  "_note": "Prompt templates for the IN6208 answer-conformity experiment. No system prompt is used for any model. {question}, {A}-{D}, {l1}-{l3} and {X} are filled per item. Each exposure round sends the same round message again; the dialogue keeps the branch's own earlier answers.",
+  "baseline": {
+    "en": "Answer the following multiple-choice question.\n\n{question}\nA. {A}\nB. {B}\nC. {C}\nD. {D}\n\nOutput only A, B, C, or D.",
+    "zh": "请回答下面的单项选择题。\n\n{question}\nA. {A}\nB. {B}\nC. {C}\nD. {D}\n\n仅输出 A、B、C 或 D。"
+  },
+  "round": {
+    "en": "Each source label denotes one task participant. Repeated labels denote the same participant; different labels denote different participants.\n\nSource {l1}: My answer is {X}.\nSource {l2}: My answer is {X}.\nSource {l3}: My answer is {X}.\n\nAnswer the question again. Output only A, B, C, or D.",
+    "zh": "每个来源标签代表一名任务参与者。相同的标签代表同一名参与者；不同的标签代表不同的参与者。\n\n来源 {l1}：我的答案是 {X}。\n来源 {l2}：我的答案是 {X}。\n来源 {l3}：我的答案是 {X}。\n\n请再次回答这道题。仅输出 A、B、C 或 D。"
+  },
+  "labels": {
+    "main": [
+      17,
+      29,
+      43
+    ],
+    "pilot": [
+      58,
+      61,
+      76
+    ]
+  },
+  "valid_response_rule": "Main rule (set after a preliminary check): valid if the first or last line of the reply gives exactly one letter A-D unambiguously (bare letter with optional formatting such as **B**, (B), 'Answer: B', '答案：B', or the letter followed by an explanation). Strict rule (exactly one letter after trimming) is recorded as valid_strict for a sensitivity check.",
+  "rounds": 3,
+  "runs": 2
+}
