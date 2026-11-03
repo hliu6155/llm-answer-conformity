@@ -24,6 +24,7 @@ Main results on the 49 items with complete data (item-level bootstrap, 10,000 re
 | `materials/build_materials.py`, `materials/build_summary.json` | Rebuilds the item lists from the MMLU and MMMLU files (seed 6208) and records the alignment checks |
 | `materials/example_prompts.md` | One item rendered in full for both languages and conditions |
 | `run_experiment.py` | Data collection: model check, pilot, screening, selection and exposure, with automatic resumption |
+| `keys.env.example` | Empty template for `keys.env`; API keys are never committed |
 | `results/` | Raw logs of every call as gzip-compressed JSON Lines (`pilot_screening`, `pilot_exposure`, `screening`, `exposure`; `.jsonl.gz`), plus `selection.csv`, `settings.json` and `pilot_report.txt` |
 | `analysis/analyze.py` | Confirmatory tests, worst-case bounds, sensitivity analysis and descriptive tables |
 | `analysis/report_checks.py` | Collection, data-quality and persistence counts quoted in the report |
@@ -41,17 +42,7 @@ python analysis/report_checks.py results > analysis/outputs/report_checks.json
 
 ## Re-running data collection
 
-Create a file named `keys.env` next to `run_experiment.py` that holds your own API keys, one per line (`QWEN_HOST` is the host name of your Alibaba Cloud Model Studio endpoint):
-
-```
-QWEN_API_KEY=...
-QWEN_HOST=...
-DEEPSEEK_API_KEY=...
-OPENAI_API_KEY=...
-ANTHROPIC_API_KEY=...
-```
-
-Then run `python run_experiment.py all` (about 10,000 calls). `keys.env` is excluded by `.gitignore`. Model aliases such as `deepseek-flash` may point to newer versions later; `results/settings.json` records the settings used and the model identifiers returned on 3 November 2026.
+Copy `keys.env.example` to `keys.env` (next to `run_experiment.py`) and add your own API keys; `QWEN_HOST` is the host name of your Alibaba Cloud Model Studio endpoint. Then run `python run_experiment.py all` (about 10,000 calls). `keys.env` is excluded by `.gitignore`, so it stays on your computer. Model aliases such as `deepseek-flash` may point to newer versions later; `results/settings.json` records the settings used and the model identifiers returned on 3 November 2026.
 
 ## Fields in the JSONL logs
 
