@@ -1,0 +1,293 @@
+{
+  "models": [
+    "Qwen3.8-Flash",
+    "DeepSeek-V4.1-Flash",
+    "GPT-6 Luna",
+    "Claude Haiku 5.5"
+  ],
+  "settings": {
+    "Qwen3.8-Flash": {
+      "api": "openai",
+      "base": "https://<workspace-endpoint>.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "model": "qwen3.8-flash",
+      "max_tokens": 1024,
+      "extra": {
+        "enable_thinking": false
+      },
+      "token_param": "max_tokens",
+      "model_returned": "qwen3.8-flash",
+      "checked_at": "2026-11-03T12:52:35+00:00"
+    },
+    "DeepSeek-V4.1-Flash": {
+      "api": "anthropic",
+      "base": "https://api.deepseek.com/anthropic",
+      "model": "deepseek-flash",
+      "max_tokens": 1024,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "token_param": "max_tokens",
+      "model_returned": "deepseek-flash",
+      "checked_at": "2026-11-03T12:52:37+00:00"
+    },
+    "GPT-6 Luna": {
+      "api": "openai",
+      "base": "https://api.openai.com/v1",
+      "model": "gpt-6-luna",
+      "max_tokens": 1024,
+      "extra": {
+        "reasoning_effort": "none"
+      },
+      "token_param": "max_completion_tokens",
+      "model_returned": "gpt-6-luna",
+      "checked_at": "2026-11-03T12:52:40+00:00"
+    },
+    "Claude Haiku 5.5": {
+      "api": "anthropic",
+      "base": "https://api.anthropic.com",
+      "model": "claude-haiku-5-5",
+      "max_tokens": 1024,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "token_param": "max_tokens",
+      "model_returned": "claude-haiku-5-5",
+      "checked_at": "2026-11-03T12:52:42+00:00"
+    }
+  },
+  "screening": {
+    "calls": 3200,
+    "valid_pct": 100.0,
+    "valid_strict_pct": 100.0,
+    "failed": 0
+  },
+  "eligibility_by_subject": {
+    "astronomy": 31,
+    "high_school_biology": 35,
+    "high_school_geography": 29,
+    "nutrition": 30,
+    "prehistory": 23
+  },
+  "exposure": {
+    "records_selected": 4800,
+    "valid_pct": 100.0,
+    "valid_strict_pct": 99.9,
+    "failed_calls": 0,
+    "expected_records": 4800,
+    "invalid_by_model_language": {
+      "Claude Haiku 5.5 | zh": 1
+    },
+    "invalid_examples": [
+      "我的回答仍然是 B。"
+    ]
+  },
+  "sample_flow": {
+    "screened": 200,
+    "eligible": 148,
+    "selected": 50,
+    "spares_run": 10,
+    "complete": 49
+  },
+  "confirmatory": {
+    "H1": {
+      "estimate_pp": 5.36,
+      "ci95_pp": [
+        2.93,
+        7.91
+      ],
+      "ci9833_pp": [
+        2.42,
+        8.55
+      ],
+      "worst_case_pp": [
+        5.25,
+        5.38
+      ],
+      "decision": "supported"
+    },
+    "H2": {
+      "estimate_pp": -0.13,
+      "ci95_pp": [
+        -1.91,
+        1.66
+      ],
+      "ci9833_pp": [
+        -2.3,
+        2.04
+      ],
+      "worst_case_pp": [
+        -0.12,
+        0.0
+      ],
+      "decision": "not supported"
+    },
+    "H3": {
+      "estimate_pp": -1.53,
+      "ci95_pp": [
+        -6.63,
+        3.57
+      ],
+      "ci9833_pp": [
+        -7.65,
+        4.59
+      ],
+      "worst_case_pp": [
+        -2.0,
+        -1.75
+      ],
+      "decision": "not supported"
+    },
+    "n_items": 49
+  },
+  "feasibility_only": false,
+  "delta_round1_by_language_pp": {
+    "en": 6.12,
+    "zh": 4.59
+  },
+  "delta_by_round_pp": {
+    "R1": 5.36,
+    "R2": 4.85,
+    "R3": 5.23
+  },
+  "per_model": {
+    "Qwen3.8-Flash": {
+      "H1_delta_pp": 9.69,
+      "ci95_pp": [
+        5.61,
+        14.29
+      ],
+      "delta_R3_minus_R1_pp": -3.06
+    },
+    "DeepSeek-V4.1-Flash": {
+      "H1_delta_pp": 11.22,
+      "ci95_pp": [
+        4.08,
+        18.88
+      ],
+      "delta_R3_minus_R1_pp": 2.55
+    },
+    "GPT-6 Luna": {
+      "H1_delta_pp": -1.53,
+      "ci95_pp": [
+        -4.59,
+        1.02
+      ],
+      "delta_R3_minus_R1_pp": 1.02
+    },
+    "Claude Haiku 5.5": {
+      "H1_delta_pp": 2.04,
+      "ci95_pp": [
+        -1.53,
+        6.12
+      ],
+      "delta_R3_minus_R1_pp": -1.02
+    }
+  },
+  "available_case_sensitivity": {
+    "H1": {
+      "n_items": 49,
+      "estimate_pp": 5.36,
+      "ci9833_pp": [
+        2.42,
+        8.67
+      ]
+    },
+    "H2": {
+      "n_items": 49,
+      "estimate_pp": -0.13,
+      "ci9833_pp": [
+        -2.3,
+        2.04
+      ]
+    },
+    "H3": {
+      "n_items": 49,
+      "estimate_pp": -1.53,
+      "ci9833_pp": [
+        -7.65,
+        4.59
+      ]
+    }
+  },
+  "strict_rule_sensitivity": {
+    "H1": {
+      "estimate_pp": 4.72,
+      "ci95_pp": [
+        2.22,
+        7.36
+      ],
+      "ci9833_pp": [
+        1.81,
+        7.92
+      ]
+    },
+    "H2": {
+      "estimate_pp": 0.14,
+      "ci95_pp": [
+        -1.39,
+        1.81
+      ],
+      "ci9833_pp": [
+        -1.81,
+        2.22
+      ]
+    },
+    "H3": {
+      "estimate_pp": -0.56,
+      "ci95_pp": [
+        -5.56,
+        4.44
+      ],
+      "ci9833_pp": [
+        -6.67,
+        5.56
+      ]
+    },
+    "n_items": 45
+  },
+  "round3_cr_by_model_pct": {
+    "Qwen3.8-Flash": 5.9,
+    "DeepSeek-V4.1-Flash": 7.9,
+    "GPT-6 Luna": 1.8,
+    "Claude Haiku 5.5": 1.5
+  },
+  "other_error_pct": 0.0,
+  "other_error_by_condition_pct": {
+    "A": 0.0,
+    "B": 0.1
+  },
+  "persistence": {
+    "branches_conforming_at_R1": 97,
+    "still_conforming_at_R3_pct": 67.0,
+    "back_to_correct_at_R3_pct": 32.0,
+    "new_conformity_R1_to_R3_pct": 0.3
+  },
+  "reasoning_tokens_mean": {
+    "Claude Haiku 5.5": 0.0,
+    "DeepSeek-V4.1-Flash": 0.0,
+    "GPT-6 Luna": 0.0,
+    "Qwen3.8-Flash": 0.0
+  },
+  "model_versions_returned": {
+    "Claude Haiku 5.5": [
+      "claude-haiku-5-5"
+    ],
+    "DeepSeek-V4.1-Flash": [
+      "deepseek-flash"
+    ],
+    "GPT-6 Luna": [
+      "gpt-6-luna"
+    ],
+    "Qwen3.8-Flash": [
+      "qwen3.8-flash"
+    ]
+  },
+  "collection_window_utc": [
+    "2026-11-03 08:47:25+00:00",
+    "2026-11-03 10:39:39+00:00"
+  ]
+}

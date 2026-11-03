@@ -1,0 +1,9 @@
+model,language,calls,valid,accuracy,failed
+Claude Haiku 5.5,en,400,100.0,91.0,0
+Claude Haiku 5.5,zh,400,100.0,86.5,0
+DeepSeek-V4.1-Flash,en,400,100.0,94.0,0
+DeepSeek-V4.1-Flash,zh,400,100.0,89.5,0
+GPT-6 Luna,en,400,100.0,95.0,0
+GPT-6 Luna,zh,400,100.0,92.2,0
+Qwen3.8-Flash,en,400,100.0,93.5,0
+Qwen3.8-Flash,zh,400,100.0,91.2,0
