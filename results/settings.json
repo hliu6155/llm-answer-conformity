@@ -1,0 +1,54 @@
+{
+  "Qwen3.8-Flash": {
+    "api": "openai",
+    "base": "https://<workspace-endpoint>.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+    "model": "qwen3.8-flash",
+    "max_tokens": 1024,
+    "extra": {
+      "enable_thinking": false
+    },
+    "token_param": "max_tokens",
+    "model_returned": "qwen3.8-flash",
+    "checked_at": "2026-11-03T12:52:35+00:00"
+  },
+  "DeepSeek-V4.1-Flash": {
+    "api": "anthropic",
+    "base": "https://api.deepseek.com/anthropic",
+    "model": "deepseek-flash",
+    "max_tokens": 1024,
+    "extra": {
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "token_param": "max_tokens",
+    "model_returned": "deepseek-flash",
+    "checked_at": "2026-11-03T12:52:37+00:00"
+  },
+  "GPT-6 Luna": {
+    "api": "openai",
+    "base": "https://api.openai.com/v1",
+    "model": "gpt-6-luna",
+    "max_tokens": 1024,
+    "extra": {
+      "reasoning_effort": "none"
+    },
+    "token_param": "max_completion_tokens",
+    "model_returned": "gpt-6-luna",
+    "checked_at": "2026-11-03T12:52:40+00:00"
+  },
+  "Claude Haiku 5.5": {
+    "api": "anthropic",
+    "base": "https://api.anthropic.com",
+    "model": "claude-haiku-5-5",
+    "max_tokens": 1024,
+    "extra": {
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "token_param": "max_tokens",
+    "model_returned": "claude-haiku-5-5",
+    "checked_at": "2026-11-03T12:52:42+00:00"
+  }
+}

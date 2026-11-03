@@ -1,0 +1,4 @@
+Qwen3.8-Flash: calls=160 valid=100% errors=0 baseline_accuracy=98% round1_conformity A=10% B=5% mean_reasoning_tokens=0.0
+DeepSeek-V4.1-Flash: calls=160 valid=100% errors=0 baseline_accuracy=100% round1_conformity A=15% B=35% mean_reasoning_tokens=0.0
+GPT-6 Luna: calls=160 valid=100% errors=0 baseline_accuracy=98% round1_conformity A=5% B=10% mean_reasoning_tokens=0.0
+Claude Haiku 5.5: calls=160 valid=100% errors=0 baseline_accuracy=98% round1_conformity A=5% B=0% mean_reasoning_tokens=0.0
